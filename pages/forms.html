@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyección de Ganado - Cunicultura Inteligente</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Panel de Proyecciones Biológicas</h1>
+            <p>Calcula el crecimiento de tu madriguera basándote en la sucesión de Fibonacci.</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="../index.html">⬅️ Volver al Inicio</a>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h3>Calculadora de Crecimiento Cunícula</h3>
+            <p>Ingresa los datos actuales de tu granja para proyectar la población ideal de conejos mes a mes.</p>
+
+            <form id="formGanado">
+                <div class="form-group">
+                    <label for="cantidadInicial">Cantidad actual de animales (parejas o base):</label>
+                    <input type="number" id="cantidadInicial" placeholder="Ej. 1" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mesesProyeccion">Número de meses a proyectar:</label>
+                    <input type="number" id="mesesProyeccion" placeholder="Ej. 6" min="1" required>
+                </div>
+
+                <button type="button" id="btnCalcular" class="btn">Generar Proyección</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>Resultados de la Proyección</h3>
+            <div id="resultadoArea">
+                <p class="text-muted">Ingresa los datos arriba y presiona "Generar Proyección" para ver los resultados aquí.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Cunicultura Inteligente - Pablo.</p>
+        </div>
+    </footer>
+
+    <script href="../js/script.js" src="../js/script.js"></script>
+</body>
+</html>

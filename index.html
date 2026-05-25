@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci en la Ganadería: Proyección de Conejos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Cunicultura Inteligente</h1>
+            <p>Matemáticas aplicadas al crecimiento de tu ganado</p>
+            <div class="user-welcome">
+                <h2>¡Hola, Rigoberto!</h2>
+                <p>Bienvenido a tu panel de control ganadero.</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#contexto">El Problema</a>
+        <a href="#algoritmo">El Algoritmo</a>
+        <a href="#servicios">Servicios Vete</a>
+        <a href="./pages/forms.html" class="btn-destacado">Registrar Ganado / Proyección</a>
+    </nav>
+
+    <main class="container">
+
+        <section id="inicio" class="card action-section">
+            <h3>Gestión de Camadas y Proyecciones</h3>
+            <p>¿Quieres saber cuántos animales tendrás en los próximos meses basándote en patrones biológicos reales?</p>
+            <a href="./pages/forms.html" class="btn">Ir al Formulario de Registro</a>
+        </section>
+
+        <section id="contexto" class="card">
+            <h3>Contexto del Problema: La Crianza de Conejos</h3>
+            <p>En el sector de la ganadería cunícula (crianza de conejos), predecir el crecimiento de la población es crucial para planificar el alimento, el espacio de las jaulas y las proyecciones de venta a mercado abierto.</p>
+            <p>Los conejos son conocidos por su velocidad de reproducción. Si asumimos un modelo idealizado donde cada pareja tarda un mes en madurar y, a partir del segundo mes, engendra una nueva pareja cada mes, el número de parejas totales sigue exactamente el patrón de la Sucesión de Fibonacci.</p>
+        </section>
+
+        <section id="algoritmo" class="card">
+            <h3>¿Cómo ayuda la matemática? (El Algoritmo)</h3>
+            <p>La sucesión de Fibonacci comienza con los números 0 y 1, y cada término siguiente es la suma de los dos anteriores.</p>
+            <p>Para proyectar tu ganado mes a mes sin utilizar vectores dinámicos complejos, utilizamos un ciclo iterativo basado en tres variables simples:</p>
+            <ul>
+                <li><strong>Variable A:</strong> Representa el estado de la población hace dos meses.</li>
+                <li><strong>Variable B:</strong> Representa el estado de la población en el mes anterior.</li>
+                <li><strong>Variable C:</strong> Es la suma de A + B, que nos da la población estimada para el mes actual.</li>
+            </ul>
+        </section>
+
+        <section id="servicios">
+            <h3>Nuestros Servicios Veterinarios Especializados</h3>
+            <div class="services-grid">
+                <div class="card service-item">
+                    <h4>🩺 Control Sanitario</h4>
+                    <p>Calendario de vacunación preventivo y desparasitación para optimizar la salud de tus reproductores.</p>
+                </div>
+                <div class="card service-item">
+                    <h4>🌾 Asesoría Nutricional</h4>
+                    <p>Diseño de dietas balanceadas para etapas de gestación, lactancia y engorde rápido.</p>
+                </div>
+                <div class="card service-item">
+                    <h4>🧬 Selección Genética</h4>
+                    <p>Asistencia técnica para evitar la consanguineidad y mejorar la calidad de la carne y pelaje.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="card text-center">
+            <h3>¿Necesitas asistencia técnica en tu granja?</h3>
+            <p>Ponte en contacto con nuestro equipo de ingenieros zootecnistas y veterinarios.</p>
+            <button onclick="alert('Formulario de contacto en mantenimiento. ¡Pronto disponible!')" class="btn">Contactar Soporte</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Cunicultura Inteligente - Proyecto Desarrollado por Pablo.</p>
+            <div class="project-links">
+                <a href="https://github.com/tu-usuario/tu-repositorio" target="_blank">📂 Repositorio Git</a> | 
+                <a href="https://tu-usuario.github.io/tu-repositorio" target="_blank">🌐 Sitio Web Publicado</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

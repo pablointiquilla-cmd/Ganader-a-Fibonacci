@@ -1,0 +1,377 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y TEMÁTICA: GANADERÍA INTELEGENTE (CUNICULTURA)
+   EFECTO: LIQUID GLASS (GLASSMORPHISM) CON BORDES SUAVES
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    /* Paleta Ganadera / Orgánica */
+    --bg-base: #f1f5f2;
+    --primary-color: #2a523a;     /* Verde follaje/campo */
+    --secondary-color: #8b5a2b;   /* Marrón tierra fértil */
+    --accent-color: #df9f28;      /* Dorado paja / sol */
+    --text-dark: #1e2922;         /* Antracita verdeado */
+    
+    /* Configuración Liquid Glass */
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: 0 8px 32px 0 rgba(42, 82, 58, 0.06);
+    --radius-soft: 20px;          /* Bordes ultra suaves sugeridos */
+}
+
+body {
+    /* Fondo con gradiente orgánico suave que hace resaltar el efecto de cristal líquido */
+    background: linear-gradient(135deg, #e3eae5 0%, #f1f5f2 50%, #f7f3eb 100%);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   PORTADA / ENCABEZADO (Gradiente Brillante + Capa de Cristal)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, rgba(42, 82, 58, 0.85), rgba(139, 90, 43, 0.75));
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 0 0 var(--radius-soft) var(--radius-soft);
+    box-shadow: 0 10px 30px rgba(42, 82, 58, 0.12);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de reflejo líquido superior */
+header::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 120%;
+    height: 70%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewY(-4deg);
+    pointer-events: none;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+/* Saludo Personalizado - Panel Flotante de Vidrio */
+.user-welcome {
+    margin-top: 25px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: var(--radius-soft);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.user-welcome h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN (Barra de Cristal Líquido de Alta Transparencia)
+   ========================================================================== */
+nav {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--glass-shadow);
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+    margin-bottom: 35px;
+    transition: all 0.3s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    background: rgba(42, 82, 58, 0.08);
+    color: #163021;
+}
+
+nav a.btn-destacado {
+    background: linear-gradient(135deg, var(--primary-color), #3b7051);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(42, 82, 58, 0.2);
+}
+
+nav a.btn-destacado:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 82, 58, 0.3);
+}
+
+/* ==========================================================================
+   TARJETAS Y SECCIONES (Contenedores Glassmorphism)
+   ========================================================================== */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-soft);
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 12px 40px 0 rgba(42, 82, 58, 0.12);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    border-bottom: 2px solid rgba(42, 82, 58, 0.1);
+    padding-bottom: 8px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: #2b3830;
+    font-size: 1rem;
+}
+
+.card ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.card li {
+    margin-bottom: 8px;
+    color: #2b3830;
+}
+
+/* Sección de llamada a la acción / Destacados */
+.action-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(223, 235, 227, 0.55));
+    border-left: 6px solid var(--primary-color);
+}
+
+/* ==========================================================================
+   BOTONES E INPUTS (Diseño Ergonómico y Líquido)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary-color), #a36f3c);
+    color: #ffffff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(139, 90, 43, 0.25);
+    font-size: 1rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 90, 43, 0.4);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(42, 82, 58, 0.2);
+    background: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(42, 82, 58, 0.12);
+}
+
+/* ==========================================================================
+   SERVICIOS GRID & VETERINARIA (Diseño Responsivo Ajustable)
+   ========================================================================== */
+.services-grid {
+    margin-bottom: 10px;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-soft);
+    padding: 22px;
+}
+
+.service-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   TABLAS Y ELEMENTOS DE RESULTADO DINÁMICO
+   ========================================================================== */
+.tabla-resultados {
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.tabla-resultados th {
+    background-color: rgba(42, 82, 58, 0.12) !important;
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.tabla-resultados td, .tabla-resultados th {
+    padding: 12px 15px !important;
+}
+
+.text-center { text-align: center; }
+.text-muted { color: #55665c; font-style: italic; }
+
+/* ==========================================================================
+   FOOTER (Pie de página integrado con el blur)
+   ========================================================================== */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--glass-border);
+    border-radius: var(--radius-soft) var(--radius-soft) 0 0;
+}
+
+.project-links {
+    margin-top: 12px;
+}
+
+.project-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+    transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES - RESPONSIVE DESIGN (Requerimiento Obligatorio de Rúbrica)
+   ========================================================================== */
+
+/* Pantallas Medianas y Grandes (Computadoras y Tablets horizontales) */
+@media (min-width: 769px) {
+    .services-grid {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .service-item {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+/* Pantallas Pequeñas (Celulares y Tablets verticales) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.9rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        border-radius: var(--radius-soft);
+        padding: 15px;
+        gap: 8px;
+    }
+    
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .services-grid {
+        display: block;
+    }
+    
+    .service-item {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
