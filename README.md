@@ -6,7 +6,7 @@
 
 ## 🚀 Enlaces del Proyecto
 * **Sitio Web Publicado:** [👉 CLIC AQUÍ PARA VER EN VIVO](https://pablointiquilla-cmd.github.io/Ganader-a-Fibonacci/)
-* **Repositorio de Código:** [📂 Ver en GitHub](https://github.com/tu-usuario/tu-repositorio)
+* **Repositorio de Código:** [📂 Ver en GitHub](https://github.com/pablointiquilla-cmd/Ganader-a-Fibonacci.git)
 
 ---
 
